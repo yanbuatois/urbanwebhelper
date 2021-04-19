@@ -1,0 +1,44 @@
+{
+  "name": "urban-webhelper",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "nodemon ./bin/www --icu-data-dir=node_modules\\full-icu",
+    "classic": "node ./bin/www --icu-data-dir=node_modules\\full-icu"
+  },
+  "dependencies": {
+    "@babel/cli": "^7.1.5",
+    "compression": "^1.7.3",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "express": "~4.16.0",
+    "express-session": "^1.15.6",
+    "full-icu": "^1.2.1",
+    "http-errors": "~1.6.2",
+    "imgur": "^0.3.1",
+    "morgan": "~1.9.0",
+    "oauth": "^0.9.15",
+    "twig": "~0.10.3",
+    "underscore": "^1.9.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.1.6",
+    "@babel/plugin-proposal-nullish-coalescing-operator": "^7.0.0",
+    "@babel/plugin-proposal-numeric-separator": "^7.0.0",
+    "@babel/plugin-proposal-optional-chaining": "^7.0.0",
+    "@babel/plugin-proposal-pipeline-operator": "^7.0.0",
+    "@babel/preset-env": "^7.1.6",
+    "autoprefixer": "^9.3.1",
+    "babel-loader": "^8.0.4",
+    "css-loader": "^1.0.1",
+    "mini-css-extract-plugin": "^0.4.4",
+    "node-sass": "^4.10.0",
+    "postcss-loader": "^3.0.0",
+    "sass-loader": "^7.1.0",
+    "standard": "^12.0.1",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.25.1",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.14"
+  }
+}

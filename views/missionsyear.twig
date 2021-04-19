@@ -1,0 +1,17 @@
+{% extends 'layouts/authlayout.twig' %}
+{% set page_selected = 'missionsyear' %}
+
+{% block title %}
+    {{ parent() }} - Year cards missing
+{% endblock %}
+
+{% block content %}
+    {% for display, year in perYear %}
+        <h2>{{ display }}</h2>
+        <ul>
+            {% for card in year %}
+                <li>{{ card.name }}</li>
+            {% endfor %}
+        </ul>
+    {% endfor %}
+{% endblock %}

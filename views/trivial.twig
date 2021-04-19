@@ -1,0 +1,9 @@
+{% extends 'layouts/authlayout.twig' %}
+{% block title %}
+    {{ parent() }} - Trivial pursuit
+{% endblock %}
+
+{% block content %}
+  <p><b>Question : </b>{{ question }}</p>
+  <p><b>Réponse : </b>{{ reponse }}</p>
+{% endblock %}

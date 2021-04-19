@@ -1,0 +1,12 @@
+{% extends 'layouts/authlayout.twig' %}
+{% block title %}
+    {{ parent() }} - Liste des doubles
+{% endblock %}
+
+{% block content %}
+    <ul>
+        {% for perso in doubles %}
+            <li><strong>{{ perso.name }}</strong> : {{ perso.prix|number_format }} clintz</li>
+        {% endfor %}
+    </ul>
+{% endblock %}

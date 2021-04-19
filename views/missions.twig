@@ -1,0 +1,22 @@
+{% extends 'layouts/authlayout.twig' %}
+{% set page_selected = 'missions' %}
+
+{% block title %}{{ parent() }} - Missions {% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-lg-12 text-center align-items-center">
+        {% for categorie in missionsCategories %}
+            {% if categorie.total > 0 %}
+                <a href="#" id="cat-{{ categorie.id }}" class="ml-3 mr-3 missions-category d-inline-block text-center"><img class="img-fluid mb-0" src="{{ categorie.clanNewPictUrl }}" alt="{{ categorie.name }}" />
+                    <span class="d-none mt-0 d-md-block">{{ categorie.name }}</span></a>
+            {% endif %}
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+{{ parent() }}
+    <script src="js/missionsScript.js"></script>
+{% endblock %}

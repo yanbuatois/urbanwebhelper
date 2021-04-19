@@ -1,0 +1,17 @@
+{% extends 'layouts/authlayout.twig' %}
+{% block title %}
+{{ parent() }} - Liste des semis
+{% endblock %}
+
+{% block content %}
+{% for clan in listeclans %}
+    <strong><img src="{{ clan.clanNewPictUrl }}" alt="logo" /> {{ clan.name }}</strong>
+    <ul>
+    {% for semi in semis %}
+        {% if semi.clan_id == clan.id %}
+            <li>{{ semi.name }} {{ semi.level }}* ({{ semi.power }}/{{ semi.damage }}) : <span title="{{ semi.abilityLongDescription }}">{{ semi.ability }}</span></li>
+        {% endif %}
+    {% endfor %}
+    </ul>
+{% endfor %}
+{% endblock %}
